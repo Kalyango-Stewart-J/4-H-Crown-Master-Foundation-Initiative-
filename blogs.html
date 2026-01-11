@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Crown Educare Initiative" />
+    <title>4-H Crown Educare Initiative</title>
+    <link rel="icon" href="./4-H Crown Master foundation.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./4-H Crown Master foundation.jpg" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./4-H.css">
+
+    <style>
+        /* Blogs Section */
+        .blog-section {
+            padding: 60px 8%;
+            background: #f8f9fc;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .blog-section h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #1d3557;
+        }
+
+        .blog-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 15px auto 40px;
+            color: #555;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+        }
+
+        .blog-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .media {
+            width: 100%;
+            height: 180px;
+            background: #ccc;
+        }
+
+        .media iframe,
+        .media video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .media.image {
+            background: url("images/placeholder.jpg") center/cover no-repeat;
+        }
+
+        .content {
+            padding: 18px;
+        }
+
+        .content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #1d3557;
+        }
+
+        .content p {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Donate button style */
+        .donate-btn {
+            text-decoration: none;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: red;
+            color: white;
+            border-radius: 0.5rem;
+        }
+        .card {
+  width: 300px;
+  height: 200px;
+  background-image: url("./grey.jpg");
+  background-size: cover;      /* fills the card */
+  background-position: center; /* centers image */
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+}
+
+    </style>
+</head>
+
+<body style="
+  font-family: Georgia, serif;
+  background: url('./grey.jpg') center/cover no-repeat fixed;
+">
+
+
+    <!-- Navigation -->
+    <nav style="font-family: Georgia, serif;">
+        <div class="container">
+            <div class="nav-content">
+
+                <!-- Logo Section -->
+                <a href="home.html" class="logo">
+                    <div class="logo-icon">
+                        <img src="./4-H Crown Master foundation.jpg" alt="Company Logo" style="width: 120px; height: auto;">
+                    </div>
+                    <div class="logo-text">
+                        <h1 style="color:aqua;">4-H CROWN MASTER</h1>
+                        <h1 style="color:aqua; text-align:center;">FOUNDATION</h1>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about us.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="blogs.html" class="active">Blogs</a></li>
+                    <li><a href="get involved.html">Get Involved</a></li>
+                </ul>
+
+                <!-- Donate Button -->
+                <a href="get involved.html" class="donate-btn">💚🙏 Donate Now</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blogs Section -->
+    <section class="blog-section">
+        <h2>Latest Stories & Impact</h2>
+        <p class="blog-intro">
+            Explore our activities, success stories, trainings, and community impact at
+            <strong>4-H Crown Master Foundation Initiative</strong>.
+        </p>
+
+        <div class="blog-grid">
+
+            <!-- CARD 1 -->
+            <div class="blog-card">
+                <div class="media">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="4-H Community Outreach" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="content">
+                    <h3>Children Leadership Training</h3>
+                    <p>Our children leadership workshops empower young children with skills in communication, teamwork, and innovation.</p>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="blog-card">
+                <div class="media">
+                    <video controls>
+                        <source src="./20250416_101549.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>Agricultural Skills Development</h3>
+                    <p>Training children in modern and sustainable agricultural practices to improve food security.</p>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="blog-card">
+                <div class="media image"></div>
+                <div class="content">
+                    <h3>Community Outreach Programs</h3>
+                    <p>We work directly with local communities to promote education, health, and self-reliance.</p>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="blog-card">
+                <div class="media">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="content">
+                    <h3>Girls Empowerment Initiative</h3>
+                    <p>Supporting young girls through mentorship, education, and life skills programs.</p>
+                </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="blog-card">
+                <div class="media image"></div>
+                <div class="content">
+                    <h3>Environmental Conservation</h3>
+                    <p>Teaching environmental responsibility through tree planting and climate awareness activities.</p>
+                </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="blog-card">
+                <div class="media">
+                    <video controls>
+                        <source src="./20250416_101549.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>ICT & Digital Skills</h3>
+                    <p>Equipping children with computer skills, coding basics, and digital literacy.</p>
+                </div>
+            </div>
+
+            <!-- CARD 7 -->
+            <div class="blog-card">
+                <div class="media image"></div>
+                <div class="content">
+                    <h3>Health Awareness Campaigns</h3>
+                    <p>Promoting hygiene, nutrition, and preventive health practices in rural communities.</p>
+                </div>
+            </div>
+
+            <!-- CARD 8 -->
+            <div class="blog-card">
+                <div class="media">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="content">
+                    <h3>Entrepreneurship Training</h3>
+                    <p>Helping youth start small businesses and income-generating projects.</p>
+                </div>
+            </div>
+
+            <!-- CARD 9 -->
+            <div class="blog-card">
+                <div class="media image"></div>
+                <div class="content">
+                    <h3>Volunteer Engagement</h3>
+                    <p>Our volunteers play a key role in transforming lives through service and mentorship.</p>
+                </div>
+            </div>
+
+            <!-- CARD 10 -->
+            <div class="blog-card">
+                <div class="media">
+                    <video controls>
+                        <source src="videos/success-story.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>Success Stories</h3>
+                    <p>Real stories from beneficial children whose lives have been changed by 4-H Crown Master Foundation Initiative.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+  <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                        <div style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">  <div class="logo-icon">
+            <img src="./4-H Crown Master foundation.jpg" alt="Company Logo" style="width: 40px; height: auto; margin-left: 10px;">
+        </div></div>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1rem;">4-H Crown Master Foundation</h3>
+                            <p style="font-size: 0.65rem; margin: 0; opacity: 0.7;">Crown Educare Foundation Initiative</p>
+                        </div>
+                    </div>
+                    <p style="opacity: 0.8;">Empowering orphans and vulnerable children through hands-on learning, mentorship, and community service. Building leaders for tomorrow.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                   <ul>
+                        <li><a href="about us.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="get involved.html">Donate</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="footer-contact">
+                        <span>📍</span>
+                        <span>Uganda, Masaka city</span>
+                    </div>
+                    <div class="footer-contact">
+                        <span>📞</span>
+                        <span>+256 759 777 088 / +256 774 916 506</span>
+                    </div>
+                    <div class="footer-contact">
+                        <span>Ⓦ WhatsApp:</span>
+                        <span>+256 774 916 506</span>
+                    </div>
+                    <div class="footer-contact">
+                        <span>Postal address</span>
+                        <span>P.O Box 1056, Masaka</span>
+                    </div>
+                     <div class="footer-contact">
+                        <span>📧</span>
+                        <span>crownstarjuniorsch@gmail.com</span>
+                    </div>
+                    
+                     <div class="footer-contact">
+                        <span>📧</span>
+                        <span>cetiuganda777@gmail.com</span>
+                    </div>
+                     <div class="footer-contact">
+                        <span>📧</span>
+                        <span>4-hcrownmasterfoundation@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p style="opacity: 0.8; margin-bottom: 1rem;">Stay updated with our latest initiatives and success stories.</p>
+                    <div class="newsletter-form">
+                        <br><br><br>
+                        <input type="email" placeholder="Enter your email">
+                        <button>Join</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 4-H Crown Master Foundation Initiative. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

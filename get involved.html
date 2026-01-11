@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Crown Educare Initiative" />
+    <title>4-H Crown Educare Initiative</title>
+    <link rel="icon" href="./4-H Crown Master foundation.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./4-H Crown Master foundation.jpg" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./4-H.css">
+</head>
+
+<body style="font-family: Georgia, serif; background-image: url(./grey.jpg);">
+
+    <!-- Navigation -->
+    <nav style="font-family: Georgia, serif;">
+        <div class="container">
+            <div class="nav-content">
+
+                <!-- Logo Section -->
+                <a href="home.html" class="logo">
+                    <div class="logo-icon">
+                        <img src="./4-H Crown Master foundation.jpg" alt="Company Logo" style="width: 120px; height: auto;">
+                    </div>
+                    <div class="logo-text">
+                        <h1 style="color:aqua;">4-H CROWN MASTER</h1>
+                        <h1 style="color:aqua; text-align:center;">FOUNDATION</h1>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about us.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="get involved.html">Get Involved</a></li>
+                </ul>
+
+                <!-- Donate Button -->
+                <a href="get involved.html" class="donate-btn" style="text-decoration: none; display: inline-block; padding: 0.5rem 1rem; background: red; color: white; border-radius: 0.5rem;">
+                    💚🙏 Donate Now
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+                                                        <!--Get involved-->
+    <!-- CONTACT SECTION -->
+    <section id="contact-section">
+        <div class="contact-hero">
+            <div class="container">
+                <h1 style="color:blue;">Get Involved</h1>
+                <p style="font-size: 1.25rem; color: var(--muted-foreground); max-width: 600px; margin: 0 auto;">Whether you want to volunteer, donate, or simply learn more, your support makes a difference in a child's life.</p>
+            </div>
+        </div>
+
+        <div class="contact-content">
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab(event, 'contact-form')" style="color:blue;">Contact Us</button>
+                <button class="tab" onclick="switchTab(event, 'donate-form')" style="color:blue;">Donate</button>
+            </div>
+
+            <!-- Contact Form -->
+            <div id="contact-form" class="tab-content active">
+                <div style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">Send us a Message</h3>
+                    <p style="color: var(--muted-foreground); margin-bottom: 1.5rem;">Have a question about our programs? Want to partner with us? Fill out the form below.</p>
+                    <form onsubmit="handleContactSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+           <!-- DONATION SECTION -->
+<div id="donate-form" class="tab-content">
+  <div style="background:#fff;padding:2rem;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.1);max-width:520px;margin:auto;">
+
+    <h3 style="font-size:1.6rem;color:#1d4ed8;margin-bottom:0.5rem;">
+      Support Our Mission
+    </h3>
+
+    <p style="color:#555;margin-bottom:1.5rem;">
+      Your donation directly supports education, shelter, and mentorship for orphans.
+    </p>
+
+    <!-- DONOR DETAILS -->
+    <div style="margin-bottom:1rem;">
+      <input type="text" id="donor-name" placeholder="Your Full Name"
+        style="width:100%;padding:0.75rem;margin-bottom:0.75rem;border:1px solid #ddd;border-radius:6px;">
+      <input type="email" id="donor-email" placeholder="Your Email Address"
+        style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:6px;">
+    </div>
+
+    <!-- PRESET AMOUNTS -->
+    <div class="donation-amounts" style="display:flex;gap:0.5rem;margin-bottom:1rem;">
+      <button class="amount-btn" onclick="selectAmount(25)">$25</button>
+      <button class="amount-btn" onclick="selectAmount(50)">$50</button>
+      <button class="amount-btn" onclick="selectAmount(100)">$100</button>
+    </div>
+
+    <!-- CUSTOM AMOUNT -->
+    <div style="margin-bottom:1rem;">
+      <input type="number" id="donation-amount" placeholder="Enter custom amount"
+        min="1"
+        style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:6px;">
+    </div>
+
+    <!-- DONATE VIA PAYPAL -->
+    <button type="button" onclick="processPayPalDonation()"style="width:100%;padding:0.85rem;background:#0070ba;color:#fff;border:none;border-radius:6px;font-size:1rem;cursor:pointer;">
+      Donate Securely via PayPal
+    </button>
+
+    <!-- OPTIONAL BANK / MOBILE PLACEHOLDERS -->
+    <div style="margin-top:1.5rem;font-size:0.85rem;color:#666;">
+      <strong>Alternative Giving:</strong><br>
+      Bank Transfer / Mobile Money available upon request.<br>
+      Contact: <a href="mailto:donate@yourdomain.org">donate@yourdomain.org</a>
+    </div>
+
+    <p style="font-size:0.75rem;color:#777;text-align:center;margin-top:1.5rem;">
+      4-H Master Foundation Initiative is a registered non-profit organization.
+    </p>
+  </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+  let selectedAmount = 0;
+
+  function selectAmount(amount) {
+    selectedAmount = amount;
+    document.getElementById("donation-amount").value = amount;
+  }
+
+  function processPayPalDonation() {
+    const amount = document.getElementById("donation-amount").value || selectedAmount;
+    const name = document.getElementById("donor-name").value;
+    const email = document.getElementById("donor-email").value;
+
+    if (!amount || amount <= 0) {
+      alert("Please enter a valid donation amount.");
+      return;
+    }
+
+    if (!email) {
+      alert("Please enter your email address.");
+      return;
+    }
+
+    /* 🔴 REPLACE THIS WITH YOUR FINAL PAYPAL EMAIL */
+    const paypalBusinessEmail = "donate@yourdomain.org";
+
+    const paypalURL =
+      "https://www.paypal.com/cgi-bin/webscr" +
+      "?cmd=_donations" +
+      "&business=" + encodeURIComponent(paypalBusinessEmail) +
+      "&currency_code=USD" +
+      "&amount=" + encodeURIComponent(amount) +
+      "&item_name=" + encodeURIComponent("Donation to 4-H Master Foundation Initiative") +
+      "&notify_url=" + encodeURIComponent("https://yourdomain.org/paypal-ipn") +
+      "&return=" + encodeURIComponent("https://yourdomain.org/thank-you") +
+      "&cancel_return=" + encodeURIComponent("https://yourdomain.org/donation-cancelled");
+
+    window.location.href = paypalURL;
+  }
+</script>
+
+<!-- BASIC BUTTON STYLES -->
+<style>
+  .amount-btn {
+    flex: 1;
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #f9fafb;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .amount-btn:hover {
+    background: #e0e7ff;
+    border-color: #1d4ed8;
+  }
+</style>
+
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                        <div style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">  <div class="logo-icon">
+            <img src="./4-H Crown Master foundation.jpg" alt="Company Logo" style="width: 40px; height: auto; margin-left: 10px;">
+        </div></div>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1rem;">4-H Crown Master Foundation</h3>
+                            <p style="font-size: 0.65rem; margin: 0; opacity: 0.7;">Crown Educare Foundation Initiative</p>
+                        </div>
+                    </div>
+                    <p style="opacity: 0.8;">Empowering orphans and vulnerable children through hands-on learning, mentorship, and community service. Building leaders for tomorrow.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                   <ul>
+                        <li><a href="about us.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="get involved.html">Donate</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="footer-contact">
+                        <span>📍</span>
+                        <span>Uganda, Masaka city</span>
+                    </div>
+                    <div class="footer-contact">
+                        <span>📞</span>
+                        <span>+256 759 777 088 / +256 774 916 506</span>
+                    </div>
+                    <div class="footer-contact">
+                        <span>Ⓦ WhatsApp:</span>
+                        <span>+256 774 916 506</span>
+                    </div>
+                    <div class="footer-contact">
+                        <span>Postal address</span>
+                        <span>P.O Box 1056, Masaka</span>
+                    </div>
+                     <div class="footer-contact">
+                        <span>📧</span>
+                        <span>crownstarjuniorsch@gmail.com</span>
+                    </div>
+                    
+                     <div class="footer-contact">
+                        <span>📧</span>
+                        <span>cetiuganda777@gmail.com</span>
+                    </div>
+                     <div class="footer-contact">
+                        <span>📧</span>
+                        <span>4-hcrownmasterfoundation@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p style="opacity: 0.8; margin-bottom: 1rem;">Stay updated with our latest initiatives and success stories.</p>
+                    <div class="newsletter-form">
+                        <br><br><br>
+                        <input type="email" placeholder="Enter your email">
+                        <button>Join</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 4-H Crown Master Foundation Initiative. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
