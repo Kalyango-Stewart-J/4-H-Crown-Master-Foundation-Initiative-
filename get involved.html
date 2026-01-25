@@ -39,15 +39,28 @@
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about us.html">About Us</a></li>
+                    <li><a href="partners.html">Partners</a></li>
                     <li><a href="programs.html">Programs</a></li>
                     <li><a href="blogs.html">Blogs</a></li>
                     <li><a href="get involved.html">Get Involved</a></li>
+                    
                 </ul>
 
                 <!-- Donate Button -->
-                <a href="get involved.html" class="donate-btn" style="text-decoration: none; display: inline-block; padding: 0.5rem 1rem; background: red; color: white; border-radius: 0.5rem;">
-                    💚🙏 Donate Now
-                </a>
+                <a href="#donate-form"
+   onclick="openDonateTab()"
+   style="text-decoration: none; display: inline-block; padding: 0.5rem 1rem; background: red; color: white; border-radius: 0.5rem;">
+   💚🙏 Donate Now
+</a>
+<script>
+function openDonateTab() {
+    setTimeout(() => {
+        document.querySelector(".tab[onclick*='donate-form']").click();
+    }, 300);
+}
+</script>
+
+
 
             </div>
         </div>
@@ -55,24 +68,27 @@
 
                                                         <!--Get involved-->
     <!-- CONTACT SECTION -->
-    <section id="contact-section">
+    <section id="contact-section" style="
+  font-family: Georgia, serif;
+  background: url('./grey.jpg') center/cover no-repeat fixed;
+">
         <div class="contact-hero">
             <div class="container">
-                <h1 style="color:blue;">Get Involved</h1>
+                <h1 style="color: #1e3a8a;">Get Involved</h1>
                 <p style="font-size: 1.25rem; color: var(--muted-foreground); max-width: 600px; margin: 0 auto;">Whether you want to volunteer, donate, or simply learn more, your support makes a difference in a child's life.</p>
             </div>
         </div>
 
         <div class="contact-content">
             <div class="tabs">
-                <button class="tab active" onclick="switchTab(event, 'contact-form')" style="color:blue;">Contact Us</button>
-                <button class="tab" onclick="switchTab(event, 'donate-form')" style="color:blue;">Donate</button>
+                <button class="tab active" onclick="switchTab(event, 'contact-form')" style="color: #1e3a8a;">Contact Us</button>
+                <button class="tab" onclick="switchTab(event, 'donate-form')" style="color: #1e3a8a;">Donate</button>
             </div>
 
             <!-- Contact Form -->
             <div id="contact-form" class="tab-content active">
                 <div style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                    <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">Send us a Message</h3>
+                    <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem; text-align: center;">Send us a Message</h3>
                     <p style="color: var(--muted-foreground); margin-bottom: 1.5rem;">Have a question about our programs? Want to partner with us? Fill out the form below.</p>
                     <form onsubmit="handleContactSubmit(event)">
                         <div class="form-row">
@@ -89,104 +105,171 @@
                             <label for="message">Message</label>
                             <textarea id="message" placeholder="How can we help you?" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary" style="text-align: center;">Send Message</button>
                     </form>
                 </div>
             </div>
 
            <!-- DONATION SECTION -->
 <div id="donate-form" class="tab-content">
-  <div style="background:#fff;padding:2rem;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.1);max-width:520px;margin:auto;">
+  <div style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background-image: url(grey.jpg);">
 
-    <h3 style="font-size:1.6rem;color:#1d4ed8;margin-bottom:0.5rem;">
-      Support Our Mission
-    </h3>
+<style>
 
-    <p style="color:#555;margin-bottom:1.5rem;">
-      Your donation directly supports education, shelter, and mentorship for orphans.
-    </p>
 
-    <!-- DONOR DETAILS -->
-    <div style="margin-bottom:1rem;">
-      <input type="text" id="donor-name" placeholder="Your Full Name"
-        style="width:100%;padding:0.75rem;margin-bottom:0.75rem;border:1px solid #ddd;border-radius:6px;">
-      <input type="email" id="donor-email" placeholder="Your Email Address"
-        style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:6px;">
-    </div>
 
-    <!-- PRESET AMOUNTS -->
-    <div class="donation-amounts" style="display:flex;gap:0.5rem;margin-bottom:1rem;">
-      <button class="amount-btn" onclick="selectAmount(25)">$25</button>
-      <button class="amount-btn" onclick="selectAmount(50)">$50</button>
-      <button class="amount-btn" onclick="selectAmount(100)">$100</button>
-    </div>
+/* TRUST BADGES */
 
-    <!-- CUSTOM AMOUNT -->
-    <div style="margin-bottom:1rem;">
-      <input type="number" id="donation-amount" placeholder="Enter custom amount"
-        min="1"
-        style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:6px;">
-    </div>
+.trust div{
+  background:white;
+  padding:0;
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  min-width:180px;}
 
-    <!-- DONATE VIA PAYPAL -->
-    <button type="button" onclick="processPayPalDonation()"style="width:100%;padding:0.85rem;background:#0070ba;color:#fff;border:none;border-radius:6px;font-size:1rem;cursor:pointer;">
-      Donate Securely via PayPal
-    </button>
+/* DONATION FORM */
+.donate-section{
+  max-width:600px;
+  margin:0 auto;
+  
+  padding:2.5rem;
+  border-radius:12px;
+  box-shadow:0 15px 40px rgba(0,0,0,.1);
+}
+.donate-section label{font-weight:600;}
+.donate-section input, .donate-section select{
+  width:100%; padding:.8rem; margin-bottom:1rem; border-radius:6px; border:1px solid #cbd5e1;
+}
+.donate-section button{
+  width:100%;
+  padding:1rem;
+  background:var(--primary);
+  color:white;
+  font-size:1.1rem;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(0,87,255,.3);
+}
 
-    <!-- OPTIONAL BANK / MOBILE PLACEHOLDERS -->
-    <div style="margin-top:1.5rem;font-size:0.85rem;color:#666;">
-      <strong>Alternative Giving:</strong><br>
-      Bank Transfer / Mobile Money available upon request.<br>
-      Contact: <a href="mailto:donate@yourdomain.org">donate@yourdomain.org</a>
-    </div>
+/* RESPONSIVE */
+@media(max-width:768px){
+  .trust{flex-direction:column; align-items:center;}
+}
+</style>
 
-    <p style="font-size:0.75rem;color:#777;text-align:center;margin-top:1.5rem;">
-      4-H Master Foundation Initiative is a registered non-profit organization.
-    </p>
+
+<!-- TRUST SECTION -->
+ <div class="trust" style="text-align: center;">
+<h1 style="color: #1e3a8a; text-align: center;">Make a Difference Today</h1>
+  <p>Your donation helps us reach more communities, fund vital programs, and create lasting impact.</p>
+    <h3>99.99%|| Uptime & Secure Transactions </h3><br>
+    <h3>24/7||  Support & Assistance</h3><br>
+    <h3>Multi-Currency||  USD, UGX, EUR, GBP</h3><br>
+     <h3>Verified NGO||  Trusted by Donors Worldwide</h3>
+ </div>
+ 
+
+<!-- DONATION FORM -->
+<section id="donate">
+  <div class="donate-section">
+    <form id="donationForm">
+      <label for="donorName">Full Name</label>
+      <input type="text" id="donorName" placeholder="Your Name" required>
+
+      <label for="donorEmail">Email</label>
+      <input type="email" id="donorEmail" placeholder="you@example.com" required>
+
+      <label for="donationAmount">Amount</label>
+      <input type="number" id="donationAmount" placeholder="Enter Amount" required>
+
+      <label for="donationCurrency">Currency</label>
+      <select id="donationCurrency">
+        <option value="USD">USD</option>
+        <option value="UGX">UGX</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+      </select>
+
+      <button type="submit">Donate Now</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="text-align:center; padding:1rem; background:green;  border-radius: 30px;">
+  <p style="margin:0;">© 2026 4-hcrownmasterfoundation. All rights reserved.</p>
+  <p style="margin:0;">Powered by Flutterwave for secure international donations.</p>
+</footer>
+
+
+<!-- FLUTTERWAVE SCRIPT -->
+<script src="https://checkout.flutterwave.com/v3.js"></script>
+<script>
+document.getElementById('donationForm').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const donorName = document.getElementById('donorName').value;
+  const donorEmail = document.getElementById('donorEmail').value;
+  const donationAmount = parseFloat(document.getElementById('donationAmount').value);
+  const donationCurrency = document.getElementById('donationCurrency').value;
+
+  if(donationAmount <= 0){
+    alert("Please enter a valid donation amount.");
+    return;
+  }
+
+  FlutterwaveCheckout({
+    public_key: "YOUR_PUBLIC_KEY_HERE", // Replace with your Flutterwave public key
+    tx_ref: "NGO-" + Date.now(),
+    amount: donationAmount,
+    currency: donationCurrency,
+    payment_options: "card, mobilemoney, ussd",
+    customer: {
+      email: donorEmail,
+      name: donorName,
+    },
+    customizations: {
+      title: "Support Our NGO",
+      description: "Donation to help communities in Uganda",
+      logo: "https://yourwebsite.org/logo.png", // Replace with your logo URL
+    },
+    callback: function (data) {
+      alert("Thank you, " + donorName + "! Your donation was successful. Transaction ID: " + data.transaction_id);
+      document.getElementById('donationForm').reset();
+    },
+    onclose: function() {
+      console.log("Donation popup closed.");
+    }
+  });
+});
+</script>
+
   </div>
 </div>
 
 <!-- JAVASCRIPT -->
+
 <script>
-  let selectedAmount = 0;
+function switchTab(evt, tabId) {
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".tab-content");
 
-  function selectAmount(amount) {
-    selectedAmount = amount;
-    document.getElementById("donation-amount").value = amount;
-  }
+    tabs.forEach(tab => tab.classList.remove("active"));
+    contents.forEach(content => content.classList.remove("active"));
 
-  function processPayPalDonation() {
-    const amount = document.getElementById("donation-amount").value || selectedAmount;
-    const name = document.getElementById("donor-name").value;
-    const email = document.getElementById("donor-email").value;
-
-    if (!amount || amount <= 0) {
-      alert("Please enter a valid donation amount.");
-      return;
-    }
-
-    if (!email) {
-      alert("Please enter your email address.");
-      return;
-    }
-
-    /* 🔴 REPLACE THIS WITH YOUR FINAL PAYPAL EMAIL */
-    const paypalBusinessEmail = "donate@yourdomain.org";
-
-    const paypalURL =
-      "https://www.paypal.com/cgi-bin/webscr" +
-      "?cmd=_donations" +
-      "&business=" + encodeURIComponent(paypalBusinessEmail) +
-      "&currency_code=USD" +
-      "&amount=" + encodeURIComponent(amount) +
-      "&item_name=" + encodeURIComponent("Donation to 4-H Master Foundation Initiative") +
-      "&notify_url=" + encodeURIComponent("https://yourdomain.org/paypal-ipn") +
-      "&return=" + encodeURIComponent("https://yourdomain.org/thank-you") +
-      "&cancel_return=" + encodeURIComponent("https://yourdomain.org/donation-cancelled");
-
-    window.location.href = paypalURL;
-  }
+    evt.currentTarget.classList.add("active");
+    document.getElementById(tabId).classList.add("active");
+}
 </script>
+<script>
+window.addEventListener("load", function () {
+    if (window.location.hash === "#donate") {
+        document.querySelector(".tab[onclick*='donate-form']").click();
+    }
+});
+</script>
+
 
 <!-- BASIC BUTTON STYLES -->
 <style>
@@ -204,6 +287,23 @@
     border-color: #1d4ed8;
   }
 </style>
+
+<style>
+/* TAB SYSTEM FIX */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab {
+    cursor: pointer;
+}
+
+</style>
+
 
     </section>
     <!-- Footer -->
