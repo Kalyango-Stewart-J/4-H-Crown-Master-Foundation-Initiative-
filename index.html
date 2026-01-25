@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +16,89 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./4-H.css">
+    <style>
+/* ===== PRELOADER ===== */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #0b0f1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 10s ease;
+}
+
+/* ===== CIRCLE ===== */
+.loader {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 6px solid rgba(255,255,255,0.2);
+  border-top-color: #00bfff;
+  animation: spin 5s linear infinite;
+  box-shadow: 0 0 15px #00bfff;
+}
+
+/* ===== TEXT ===== */
+.loading-text {
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 2px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* ===== SPIN ===== */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== CONTENT ===== */
+#content {
+  display: none;
+}
+</style>
 </head>
 
 <body style="font-family: Georgia, serif; background-image: url(./grey.jpg);">
+    
+
+                    <!-- PRELOADER -->
+                <div id="preloader">
+                <div class="loader"></div>
+                <div class="loading-text" style="color: aqua;"><p class="uganda-spray animated-spray" style="font-size: 45px;"><B>4-H CROWN MASTER FOUNDATION UGANDA--MASAKA CITY</B></p><div class="uganda-flag-wave" title="Uganda">
+    <div class="stripe black"></div>
+    <div class="stripe yellow"></div>
+    <div class="stripe red"></div>
+    <div class="stripe black"></div>
+    <div class="stripe yellow"></div>
+    <div class="stripe red"></div>
+
+    <div class="emblem">
+        <!-- Crested crane image now fills the circle -->
+        <img src="crested.jpg" alt="Crested Crane">
+    </div>
+</div>
+</div>
+                </div>
+
+
+                <script>
+                window.addEventListener("load", () => {
+                const preloader = document.getElementById("preloader");
+                const content = document.getElementById("content");
+
+                preloader.style.opacity = "0";
+
+                setTimeout(() => {
+                    preloader.style.display = "none";
+                    content.style.display = "block";
+                }, 10000);
+                });
+                </script>
 
     <!-- Navigation -->
     <nav style="font-family: Georgia, serif;">
@@ -25,7 +106,7 @@
             <div class="nav-content">
 
                 <!-- Logo Section -->
-                <a href="home.html" class="logo">
+                <a href="index.html" class="logo">
                     <div class="logo-icon">
                         <img src="./4-H Crown Master foundation.jpg" alt="Company Logo" style="width: 120px; height: auto;">
                     </div>
@@ -39,6 +120,7 @@
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about us.html">About Us</a></li>
+                      <li><a href="partners.html">Partners</a></li>
                     <li><a href="programs.html">Programs</a></li>
                     <li><a href="blogs.html">Blogs</a></li>
                     <li><a href="get involved.html">Get Involved</a></li>
@@ -55,7 +137,10 @@
 
 
  <!-- HOME SECTION -->
-    <section id="home-section" class="visible">
+    <section id="home-section" class="visible" style="
+  font-family: Georgia, serif;
+  background: url('./grey.jpg') center/cover no-repeat fixed;
+">
                   <!-- Hero -->
                   <div class="hero">
                       <div class="container">
@@ -77,7 +162,7 @@
                 <div class="initiatives">
             <div class="container">
               <div>
-                <h1 class="bottom-header" style="color:blue;"><b>Our Core Initiatives</b></h1>
+                <h1 class="bottom-header" style="color: #1e3a8a;"><b>Our Core Initiatives</b></h1>
                 <p>
                   We focus on holistic development through the proven 4-H methodology of learning by doing.
                 </p>
@@ -88,7 +173,7 @@
                 <!-- Card 1 -->
                 <div class="card">
                   <img src="./agric2.jpeg" alt="Agricultural Education" class="card-image">
-                  <h3 style="color:blue;">Agricultural Education</h3>
+                  <h3 style="color: #1e3a8a;">Agricultural Education</h3>
                   <p>
                     Hands-on farming and gardening programs that teach sustainability,
                     biology, and the value of nurturing growth.
@@ -98,7 +183,7 @@
                 <!-- Card 2 -->
                 <div class="card">
                   <img src="./mentorship.jpeg" alt="STEM Mentorship" class="card-image">
-                  <h3 style="color:blue;">STEM Mentorship</h3>
+                  <h3 style="color: #1e3a8a;">STEM Mentorship</h3>
                   <p>
                     Connecting children with mentors in Science, Technology, Engineering,
                     and Math to unlock future career paths.
@@ -108,7 +193,7 @@
                 <!-- Card 3 -->
                 <div class="card">
                   <img src="bottle2.jpeg" alt="Civic Engagement" class="card-image">
-                  <h3 style="color:blue;">Civic Engagement</h3>
+                  <h3 style="color: #1e3a8a;">Civic Engagement</h3>
                   <p>
                     Empowering young children to be active citizens through community
                     service projects and leadership training.
@@ -118,6 +203,7 @@
               </div>
             </div>
           </div>
+         <br><br>
 
                   <!-- Stats -->
                   <div class="stats-section">
@@ -128,7 +214,7 @@
                                   <p>Children Supported</p>
                               </div>
                               <div class="stat-item">
-                                  <h4>5</h4>
+                                  <h4>11</h4>
                                   <p>Years Active</p>
                               </div>
                               <div class="stat-item">
@@ -151,7 +237,7 @@
                                   <img src="./mentorship2.jpeg" alt="Mentorship in action" style="width: 600px; height: 400px;">
                               </div>
                               <div class="feature-text">
-                                  <h2 style="color:blue;">Mentorship That Matters</h2>
+                                  <h2 style="color: #1e3a8a;">Mentorship That Matters</h2>
                                   <p>Every child deserves a champion. Our mentorship program pairs youth with caring adults who provide guidance, stability, and encouragement. Through regular interaction, we build confidence and self-esteem that lasts a lifetime.</p>
                                   <ul class="feature-list">
                                       <li>One-on-one guidance</li>
@@ -219,6 +305,7 @@
                                   <button class="carousel-control-next"></button>
 
                                   </div>
+                                  <br><br>
                                   <script>
                                   const slides = document.querySelectorAll('.carousel-item');
                                   const indicators = document.querySelectorAll('.carousel-indicators button');
@@ -257,7 +344,7 @@
                                   <img src="school photo.jpeg" alt="Mentorship in action" style="width: 600px; height: 400px;">
                               </div>
                               <div class="feature-text" style="direction: ltr;">
-                                  <h2 style="color:blue;">Community at the Core</h2>
+                                  <h2 style="color: #1e3a8a;">Community at the Core</h2>
                                   <p>We believe that it takes a village to raise a child. Our initiatives are deeply rooted in community partnership, fostering a sense of belonging and civic responsibility in every young person we serve.</p>
                                   <div class="testimonial">
                                       <p>"The 4-H Crown Master Foundation gave me a family when I needed it most. They taught me that I have something valuable to contribute to the world."</p>
