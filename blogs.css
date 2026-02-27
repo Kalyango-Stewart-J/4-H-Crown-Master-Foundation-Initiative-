@@ -69,15 +69,7 @@
             line-height: 1.6;
         }
 
-        /* Donate button style */
-        .donate-btn {
-            text-decoration: none;
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: red;
-            color: white;
-            border-radius: 0.5rem;
-        }
+   
         .card {
   width: 300px;
   height: 200px;
@@ -88,4 +80,5 @@
   border-radius: 12px;
   padding: 20px;
   color: white;
+
 }
