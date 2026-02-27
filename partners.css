@@ -1,0 +1,31 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+/* Root Variables */
+        :root {
+            --primary: #1a5f3f;
+            --primary-light: #2d7a54;
+            --primary-foreground: #ffffff;
+            --secondary: #f5eee1;
+            --secondary-foreground: #1a5f3f;
+            --accent: #d4a545;
+            --accent-foreground: #1a5f3f;
+            --background: #faf7f2;
+            --foreground: #1a3d2a;
+            --muted: #f0ebe4;
+            --muted-foreground: #4a6b5a;
+            --border: #e8dfd5;
+        }
+         /* General Container */
+
+    
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+       

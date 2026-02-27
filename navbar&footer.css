@@ -29,7 +29,7 @@ nav {
 .logo {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   text-decoration: none;
   margin-left: 0;
 }

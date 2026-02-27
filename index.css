@@ -1,0 +1,460 @@
+        /* Sections */
+        section {
+            padding: 2rem 1rem;
+        }
+
+        section.hidden {
+            display: none;
+        }
+
+        section.visible {
+            display: block;
+        }
+
+        /* Hero */
+        .hero {
+            overflow: hidden;
+            background-image: url('./class.jpg'); 
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-repeat: no-repeat;
+            border-radius: 25px;
+            
+            
+            
+            
+        }
+
+        .hero-content {
+            max-width: 2000px;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(212, 165, 69, 0.2);
+            border: 1px solid rgba(212, 165, 69, 0.3);
+            color: var(--accent-foreground);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--muted-foreground);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 9999px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-light);
+            box-shadow: 0 10px 20px rgba(26, 95, 63, 0.2);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(26, 95, 63, 0.05);
+        }
+
+        /* Initiatives */
+    
+            .programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Image polish */
+.card-image {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text styling */
+.card h3 {
+  margin: 1rem 1rem 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card p {
+  padding: 0 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+          
+
+        /* Stats Section */
+        .stats-section {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        /* Feature Sections */
+        .feature-section {
+            padding: 2rem 1rem;
+        }
+
+        .feature-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .feature-image {
+            position: relative;
+        }
+
+        .feature-image::before {
+            content: '';
+            position: absolute;
+            inset: -1rem;
+            background: rgba(212, 165, 69, 0.2);
+            border-radius: 1rem;
+            transform: rotate(-3deg);
+            z-index: 0;
+        }
+
+        .feature-image img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-text h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-text p {
+            color: var(--muted-foreground);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            color: var(--foreground);
+        }
+
+        .feature-list li::before {
+            content: '';
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .testimonial {
+            background: rgba(212, 165, 69, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .testimonial p:first-child {
+            font-style: italic;
+            color: var(--foreground);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial p:last-child {
+            font-weight: bold;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .feature-content {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+            .feature-text h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        
+/* ===== Carousel base ===== */
+   #carouselExample {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+
+    .carousel-inner {
+      position: relative;
+      width: 100%;
+    }
+
+    .carousel-item {
+      display: none;
+      width: 100%;
+      position: relative;
+    }
+
+    .carousel-item.active {
+      display: block;
+    }
+
+    /* ===== Slide content ===== */
+    .slide-content {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0 10px;
+      object-fit: cover;
+      box-sizing: border-box;
+    }
+
+    .slide-content img {
+      width: 48%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* ===== Caption ===== */
+    .carousel-caption {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      max-width: 90%;
+      text-align: center;
+      color: #fff;
+    }
+
+    /* ===== Indicators ===== */
+    .carousel-indicators {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      z-index: 10;
+      right: auto;
+      margin: 0;
+    }
+
+    .carousel-indicators button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,255,255,0.5);
+      cursor: pointer;
+    }
+
+    .carousel-indicators button.active {
+      background: #fff;
+    }
+
+    /* ===== Controls ===== */
+    .carousel-control-prev,
+    .carousel-control-next {
+      display: none;
+    }
+
+    .carousel-control-prev {
+      left: 10px;
+    }
+
+    .carousel-control-next {
+      right: 10px;
+    }
+
+    .carousel-control-prev::before,
+    .carousel-control-next::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      border-top: 3px solid white;
+      border-right: 3px solid white;
+    }
+
+    .carousel-control-prev::before {
+      transform: rotate(-135deg);
+      margin-left: 15px;
+    }
+
+    .carousel-control-next::before {
+      transform: rotate(45deg);
+      margin-left: 10px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .slide-content {
+        flex-direction: column;
+        padding: 0 5px;
+      }
+
+      .slide-content img {
+        width: 100%;
+        height: 250px;
+      }
+    }
+
+/*core initiatives*/
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card-image {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 18px 0 8px;
+}
+
+.card p {
+  padding: 0 20px 25px;
+  color: #555;
+  line-height: 1.6;
+}
