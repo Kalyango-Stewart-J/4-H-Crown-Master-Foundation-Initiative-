@@ -14,7 +14,7 @@
         /* Hero */
         .hero {
             overflow: hidden;
-            background-image: url('./class.jpg'); 
+            background-image: url('class.webp'); 
             background-size: cover;
             background-position: center;
             min-height: 500px;
